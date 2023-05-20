@@ -1,2 +1,5 @@
 /back/node_modules
 /back/yarn.lock
+
+/front/node_modules
+/front/yarn.lock
