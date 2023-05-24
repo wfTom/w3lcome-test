@@ -1,5 +1,6 @@
-/back/node_modules
-/back/yarn.lock
+/server/node_modules
+/server/yarn.lock
 
-/front/node_modules
-/front/yarn.lock
+/client/node_modules
+/client/.next
+/client/yarn.lock
