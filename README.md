@@ -39,7 +39,8 @@ Project made to test of developer fullstack in W3LCOME
   
 ## :bookmark: About
 
-The **ToDo List W3LCOME** is a Web and Server application of a List of ToDo activities, in this application is possibible create a new task, 
+The **ToDo List W3LCOME** is a Web and Server application of a List of ToDo activities, in this application is possibible create a new task, mark it as completed and delete it, the application also has paging, it also has an optimistic interface for updating and deleting.
+The log of all activities was implemented on the server with winston, which contains an info file and an error generated in the root of the server folder with all requests, timestamp and data of requests.
 
 ## Getting Started
 
