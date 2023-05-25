@@ -11,7 +11,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/wfTom/nlw-2-proffy?color=774DD6">
 </p>
 
-Project made to test of developer fullstack in W3LCOME
+Project made to test the developer's fullstack job at W3LCOME
 
 <p align="center">
     <a href="README.md">English</a>
@@ -27,10 +27,6 @@ Project made to test of developer fullstack in W3LCOME
 
 <p align="center">
   <a href="#bookmark-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-funcionalidades">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#construction_worker-how-to-run">How to run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">License</a>
 </p>
 
 <p align="center">
