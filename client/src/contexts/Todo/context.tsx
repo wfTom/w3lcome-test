@@ -18,18 +18,23 @@ export const TodoProvider = (props: any) => {
   const [param, setParam] = useState<string>('')
   const [error, setError] = useState<string>('')
   const [tasks, setTasks] = useState<Task[]>([])
+  const [offset, setOffset] = useState(0)
+  const [total, setTotal] = useState(0)
+  const [completed, setCompleted] = useState(0)
 
   useEffect(() => {
-    listTask({}).then((response) => {
-      const { data } = response
-      setTasks(data)
-    })
-  }, [])
+    onListTasks({})
+  }, [total])
 
   async function onCreateTasks(input: Task): Promise<void> {
     try {
-      await createTask(input)
-      await onListTasks({})
+      await createTask(input).then((response) => {
+        const { tasks, offset, total, completed } = response
+        setTasks(tasks)
+        setOffset(offset)
+        setTotal(total)
+        setCompleted(completed)
+      })
     } catch (error) {
       setError(
         'Não foi possível completar a requisição, favor tentar novamente mais tarde.',
@@ -39,7 +44,13 @@ export const TodoProvider = (props: any) => {
 
   async function onListTasks(input: FindTask): Promise<void> {
     try {
-      setTasks(await listTask(input))
+      await listTask(input).then((response) => {
+        const { tasks, offset, total, completed } = response
+        setTasks(tasks)
+        setOffset(offset)
+        setTotal(total)
+        setCompleted(completed)
+      })
     } catch (error) {
       setError(
         'Não foi possível completar a requisição, favor tentar novamente mais tarde.',
@@ -49,8 +60,24 @@ export const TodoProvider = (props: any) => {
 
   async function onDeleteTask(task: DeleteTask): Promise<void> {
     try {
-      await deleteTask(task)
-      await onListTasks({})
+      const { id } = task
+
+      const confirm = window.confirm('Você tem certeza que deseja excluir')
+
+      if (confirm) {
+        // interface otimista
+        const taskIndex = tasks.findIndex((task) => task.id === id)
+        if (taskIndex !== -1) {
+          // eslint-disable-next-line no-unused-expressions
+          tasks.splice(taskIndex, 1)[0]
+          setTasks([...tasks])
+          setTotal(tasks.length)
+
+          setTotal(tasks.length - 1)
+        }
+
+        await deleteTask(task)
+      }
     } catch (error) {
       setError(
         'Não foi possível completar a requisição, favor tentar novamente mais tarde.',
@@ -58,10 +85,22 @@ export const TodoProvider = (props: any) => {
     }
   }
 
-  async function onUpdateTask(task: Task): Promise<void> {
+  async function onUpdateTask(updatedTask: Task): Promise<void> {
     try {
-      await updateTask(task)
-      await onListTasks({})
+      // interface otimista
+      const taskIndex = tasks.findIndex((task) => task.id === updatedTask.id)
+      if (taskIndex !== -1) {
+        tasks[taskIndex] = { ...tasks[taskIndex], ...updatedTask }
+        setTasks([...tasks])
+
+        if (updatedTask.isComplete) {
+          setCompleted(completed + 1)
+        } else {
+          setCompleted(completed - 1)
+        }
+      }
+
+      await updateTask(updatedTask)
     } catch (error) {
       setError(
         'Não foi possível completar a requisição, favor tentar novamente mais tarde.',
@@ -72,11 +111,15 @@ export const TodoProvider = (props: any) => {
   return (
     <TodoContext.Provider
       value={{
+        tasks,
+        setTasks,
         param,
         setParam,
         error,
-        tasks,
-        setTasks,
+        offset,
+        setOffset,
+        total,
+        completed,
         onCreateTasks,
         onListTasks,
         onDeleteTask,

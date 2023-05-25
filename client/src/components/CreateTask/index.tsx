@@ -1,21 +1,22 @@
 'use client'
 
-import { createTask } from '@/api/services/Task'
-import { useState } from 'react'
+import { TodoContext } from '@/contexts/Todo'
+import { useState, useContext } from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 
 export default function CreateTask() {
   const [title, setTitle] = useState<string>('')
+  const { onCreateTasks } = useContext(TodoContext)
 
   async function handleAddTodoList() {
     if (title !== '') {
-      await createTask({ title, isComplete: false })
+      onCreateTasks({ title, isComplete: false })
       setTitle('')
     }
   }
 
   return (
-    <div className={'m-2 my-auto max-w-3xl px-0 py-1'}>
+    <div className={'m-2 my-auto mt-2.5 px-0 py-1'}>
       <div className={'flex w-96 gap-2'}>
         <input
           className={
@@ -29,7 +30,7 @@ export default function CreateTask() {
         <button
           onClick={handleAddTodoList}
           className={
-            'align-center flex h-12 flex-row justify-center gap-2 rounded-lg bg-blue-950 p-4 text-white'
+            'align-center align-center flex h-12 flex-row justify-center gap-2 rounded-lg bg-blue-950 p-4 text-white'
           }
           type="button"
         >

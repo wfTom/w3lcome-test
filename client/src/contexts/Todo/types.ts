@@ -8,6 +8,10 @@ export type TodoContextProps = {
   param: string
   setParam: Dispatch<SetStateAction<string>>
   error: string
+  offset: number
+  setOffset: Dispatch<SetStateAction<number>>
+  total: number
+  completed: number
   onCreateTasks: (input: Task) => void
   onListTasks: (input: FindTask) => void
   onDeleteTask: (id: DeleteTask) => void

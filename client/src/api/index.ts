@@ -7,4 +7,13 @@ const api = axios.create({
   baseURL: process.env.API_URL || 'http://localhost:3333',
 })
 
+api.interceptors.response.use(
+  (response) => {
+    return response.data
+  },
+  (error) => {
+    return Promise.reject(error)
+  },
+)
+
 export default api

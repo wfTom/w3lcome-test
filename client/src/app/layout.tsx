@@ -1,7 +1,7 @@
-import './globals.css'
-import { ReactNode } from 'react'
-import { Poppins } from 'next/font/google'
 import { TodoProvider } from '@/contexts/Todo'
+import { Poppins } from 'next/font/google'
+import { ReactNode } from 'react'
+import './globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}  font-sans text-gray-100 `}>
+      <body className={`${poppins.variable} font-sans text-gray-100`}>
         <TodoProvider>{children}</TodoProvider>
       </body>
     </html>
