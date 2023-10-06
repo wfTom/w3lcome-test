@@ -8,10 +8,10 @@
    <a href="https://www.linkedin.com/in/wellington-barros-593ba0137/">
       <img alt="Wellington Barros" src="https://img.shields.io/badge/-Wellington%20Barros-8257E5?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/wfTom/nlw-2-proffy?color=774DD6">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/wfTom/w3lcome-test?color=774DD6">
 </p>
 
-Projeto feito para teste do fullstack do desenvolvedor no W3LCOME
+Projeto feito para o teste da vaga de desenvolvedor fullstack na W3LCOME
 
 <p align="center">
     <a href="README.md">English</a>
@@ -26,7 +26,11 @@ Projeto feito para teste do fullstack do desenvolvedor no W3LCOME
 </div>
 
 <p align="center">
-  <a href="#bookmark-about">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#bookmark-about">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#computer-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#rocket-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#construction_worker-how-to-run">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#memo-licença">Licença</a>
 </p>
 
 <p align="center">
@@ -43,3 +47,84 @@ O swagger foi configurado para fazer a documentação da API, que possui 4 endpo
 - POST - para registrar uma nova tarefa
 - PATCH - para marcar uma tarefa como concluída
 - EXCLUIR - para excluir uma tarefa.
+
+### Capturas de Tela
+
+<div>
+   <img src="./.github/screenshot.jpeg" width="400px">
+   <img src="./.github/pagination.png" width="400px">
+</div>
+<div>
+   <img src="./.github/pagination.png" width="400px">
+   <img src="./.github/delete.png" width="400px">
+</div>
+
+# :computer: Tecnologias
+
+Este projeto foi feito utilizando as seguintes tecnologias:
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Axios](https://github.com/axios/axios)
+- [ReactJS](https://reactjs.org/)
+
+# :rocket: Funcionalidades
+
+- Lista de afazeres.
+- Adicionar e remover atividades.
+- Paginação.
+- Marcar como concluído.
+
+- ### **Requisitos**
+
+  - É **necessário** ter o **[Node.js](https://nodejs.org/en/)** instalado
+    no computador.
+  - É **opcional** ter o **[Git](https://git-scm.com/)** instalado e
+    configurado no computador, mas é melhor ter.
+  - Além disso, é **necessário** que um gerenciador de pacotes seja o
+    **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
+
+```bash
+# Clone Repositório
+$ git clone https://github.com/wfTom/w3lcome-test.git
+```
+
+### 📦 Run API
+
+```bash
+# Vá para a pasta do servidor
+$ cd w3lcome-test/server
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação
+$ yarn start
+```
+
+Accesse a API em http://localhost:3333/
+
+### 💻 Execute a aplicação web
+
+```bash
+# Vá para a pasta do site
+$ cd w3lcome-test/client
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação
+$ yarn start
+```
+
+Vá para http://localhost:3000/ to see the result.
+
+# :closed_book: License
+
+Released in 2021 :closed_book: Licença
+
+Feito com amor por [wfTom](https://github.com/wfTom) 🚀. Este projeto está sob
+a [licença MIT](./LICENSE).
+
+Dê um ⭐️ se esse projeto te ajudou!
