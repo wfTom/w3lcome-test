@@ -8,7 +8,7 @@
    <a href="https://www.linkedin.com/in/wellington-barros-593ba0137/">
       <img alt="Wellington Barros" src="https://img.shields.io/badge/-Wellington%20Barros-8257E5?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/wfTom/nlw-2-proffy?color=774DD6">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/wfTom/w3lcome-test?color=774DD6">
 </p>
 
 Project made to test the developer's fullstack job at W3LCOME
@@ -26,7 +26,11 @@ Project made to test the developer's fullstack job at W3LCOME
 </div>
 
 <p align="center">
-  <a href="#bookmark-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#bookmark-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#rocket-funcionalidades">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#construction_worker-how-to-run">How to run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#memo-licença">License</a>
 </p>
 
 <p align="center">
@@ -43,3 +47,84 @@ The swagger was configured to do the api documentation, which has 4 endpoints:
 - POST - to register a new task
 - PATCH - to mark a task as completed
 - DELETE - to delete a task.
+
+### Web Screenshot
+
+<div>
+   <img src="./.github/screenshot.jpeg" width="400px">
+   <img src="./.github/pagination.png" width="400px">
+</div>
+<div>
+   <img src="./.github/pagination.png" width="400px">
+   <img src="./.github/delete.png" width="400px">
+</div>
+
+# :computer: Technologies
+
+This project was made using the follow technologies:
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Axios](https://github.com/axios/axios)
+- [ReactJS](https://reactjs.org/)
+
+# :rocket: Features
+
+- ToDo list.
+- Add and Remove activities.
+- Pagination.
+- Mark as complete.
+
+- ### **Requirements**
+
+  - It is **necessary** to have **[Node.js](https://nodejs.org/en/)** installed
+    on the computer.
+  - It is **optional** to have **[Git](https://git-scm.com/)** installed and
+    configured on the computer, but it is better to have.
+  - Also, it is **necessary** to have a package manager be the
+    **[NPM](https://www.npmjs.com/)** or **[Yarn](https://yarnpkg.com/)**.
+
+```bash
+# Clone Repository
+$ git clone https://github.com/wfTom/w3lcome-test.git
+```
+
+### 📦 Run API
+
+```bash
+# Go to server folder
+$ cd w3lcome-test/server
+
+# Install Dependencies
+$ yarn install
+
+# Run Application
+$ yarn start
+```
+
+Access API at http://localhost:3333/
+
+### 💻 Run Web Project
+
+```bash
+# Go to web folder
+$ cd w3lcome-test/client
+
+# Install Dependencies
+$ yarn install
+
+# Run Application
+$ yarn start
+```
+
+Go to http://localhost:3000/ to see the result.
+
+# :closed_book: License
+
+Released in 2021 :closed_book: License
+
+Made with love by [wfTom](https://github.com/wfTom) 🚀. This project is under
+the [MIT license](./LICENSE).
+
+Give a ⭐️ if this project helped you!
