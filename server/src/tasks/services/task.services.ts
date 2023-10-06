@@ -12,7 +12,6 @@ const tasks: Task[] = [
 
 export const FindTaskService = async (input: FindTaskType) => {
   try {
-    console.log('input: ', input)
     const { limit = 5, offset = 0 } = input
 
     logger.info('FindTaskService working... -> input:', input)
