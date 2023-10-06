@@ -100,7 +100,7 @@ $ cd w3lcome-test/server
 $ yarn install
 
 # Run Application
-$ yarn start
+$ yarn dev
 ```
 
 Access API at http://localhost:3333/
@@ -115,7 +115,7 @@ $ cd w3lcome-test/client
 $ yarn install
 
 # Run Application
-$ yarn start
+$ yarn dev
 ```
 
 Go to http://localhost:3000/ to see the result.
