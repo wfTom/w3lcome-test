@@ -86,7 +86,7 @@ Este projeto foi feito utilizando as seguintes tecnologias:
     **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
 
 ```bash
-# Clone Repositório
+# Clone o Repositório
 $ git clone https://github.com/wfTom/w3lcome-test.git
 ```
 
@@ -100,7 +100,7 @@ $ cd w3lcome-test/server
 $ yarn install
 
 # Execute a aplicação
-$ yarn start
+$ yarn dev
 ```
 
 Accesse a API em http://localhost:3333/
@@ -115,10 +115,10 @@ $ cd w3lcome-test/client
 $ yarn install
 
 # Execute a aplicação
-$ yarn start
+$ yarn dev
 ```
 
-Vá para http://localhost:3000/ to see the result.
+Vá para http://localhost:3000/ para ver o resultado.
 
 # :closed_book: License
 
